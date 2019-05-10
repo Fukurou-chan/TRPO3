@@ -46,6 +46,13 @@ int Parser(Figure* new, char* A)
     return 0;
 }
 
+void S_And_P_Circle(double* S, double* P, Figure* new)
+
+{
+    double r = new->coordinates[2];
+    *S = M_PI * (r * r);
+    *P = 2 * M_PI * r;
+}
 
 void S_And_P_Triangle(double* S, double* P, Figure* new)
 
