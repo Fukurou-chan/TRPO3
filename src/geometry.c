@@ -1,6 +1,14 @@
 #include "geometry.h"
 #include <ctype.h>
 #include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define TRIANGLE 1
+#define CIRCLE 2
+#include "geometry.h"
+#include <ctype.h>
+#include <math.h>
 int Parser(Figure* new, char* A)
 
 {
