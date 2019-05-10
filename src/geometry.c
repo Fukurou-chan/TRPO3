@@ -45,3 +45,23 @@ int Parser(Figure* new, char* A)
 
     return 0;
 }
+
+
+void S_And_P_Triangle(double* S, double* P, Figure* new)
+
+{
+    double a
+            = sqrt(pow((new->coordinates[2] - new->coordinates[0]), 2.0)
+                   + pow((new->coordinates[3] - new->coordinates[1]), 2.0));
+
+    double b
+            = sqrt(pow((new->coordinates[4] - new->coordinates[2]), 2.0)
+                   + pow((new->coordinates[5] - new->coordinates[3]), 2.0));
+
+    double c
+            = sqrt(pow((new->coordinates[0] - new->coordinates[4]), 2.0)
+                   + pow((new->coordinates[1] - new->coordinates[5]), 2.0));
+    *P = a + b + c;
+    double p = (a + b + c) / 2;
+    *S = sqrt(p * (p - a) * (p - b) * (p - c));
+}
